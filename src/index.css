@@ -1,13 +1,443 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-padding-top: 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.footerImage i {
+  color: rgb(17, 42, 70);
+}
+
+.container1 {
+  width: 95%;
+  color: rgb(17, 42, 70) !important;
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  grid-template-areas:
+    "sectionAboutMe aboutMeIMG aboutMe aboutMe aboutMe aboutMe"
+    "sectionAboutMe aboutInterests aboutEducation aboutSkills aboutSkills aboutSkills";
+  grid-row-gap: 4em;
+}
+
+.container2 {
+  width: 100%;
+  color: rgb(17, 42, 70) !important;
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  background-color: rgb(172, 223, 229);
+  padding: 1em;
+  grid-template-areas:
+    "sectionProjects Phase1 Phase1 Phase2 Phase2"
+    "sectionProjects homework1 project1 homework3 project2"
+    "sectionProjects homework2 project1 homework4 project2"
+    "sectionProjects Phase3 Phase3 Phase3 Phase3"
+    "sectionProjects homework5 project3 project31 project31"
+    "sectionProjects homework6 project3 project31 project31"
+    "sectionProjects PersonalProjects PersonalProjects PersonalProjects PersonalProjects"
+    "sectionProjects python python python python";
+  grid-row-gap: 4em;
+  justify-items: start;
+}
+
+.container3 {
+  width: 100%;
+  color: rgb(17, 42, 70) !important;
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  grid-template-areas: "sectionResume resume resume resume resume resume";
+  align-items: center;
+  justify-items: start;
+}
+
+.container4 {
+  width: 100%;
+  color: rgb(17, 42, 70) !important;
+  background-color: rgb(172, 223, 229);
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  grid-template-areas:
+    "sectionContactMe contactMeName contactMeName contactMeEmail contactMeEmail contactMeSubmit"
+    "sectionContactMe contactMeSubject contactMeSubject contactMeSubject contactMeSubject contactMeSubmit"
+    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit"
+    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit";
+  align-items: center;
+}
+
+.container3 .resumeNav {
+  justify-self: flex-start !important;
+}
+
+img {
+  float: left;
+  width: 100%;
+  min-height: 30%;
+  object-fit: cover;
+  border-bottom: 1px solid;
+}
+
+.active {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.card ul {
+  height: 12%;
+}
+
+.navColor {
+  background-color: rgb(27, 42, 65);
+  color: rgb(245, 254, 255) !important;
+}
+
+.navText {
+  color: rgb(245, 254, 255) !important;
+  padding-bottom: 0px;
+}
+
+.item1 {
+  margin: 1% auto;
+  padding: 2% 2%;
+  color: rgb(17, 42, 70);
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  border: none;
+}
+
+.aboutMe {
+  grid-area: aboutMe;
+}
+
+.aboutmepic {
+  grid-area: aboutMeIMG;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  align-self: center;
+}
+
+.aboutMeOverview {
+  grid-area: aboutMeOverview;
+}
+.aboutInterests {
+  grid-area: aboutInterests;
+}
+.aboutEducation {
+  grid-area: aboutEducation;
+}
+.aboutSkills {
+  grid-area: aboutSkills;
+}
+
+.aboutIcon {
+  height:50px;
+  width:50px;
+  border: none;
+}
+
+.school {
+  font-size: 15px;
+}
+
+.degree {
+  font-size: 13px;
+}
+
+.project1 {
+  grid-area: project1;
+}
+
+.project2 {
+  grid-area: project2;
+}
+
+.project3 {
+  grid-area: project3;
+}
+
+.project3-cont {
+  grid-area: project31;
+}
+
+.PersonalProjects {
+  grid-area: PersonalProjects;
+}
+
+.homework1 {
+  grid-area: homework1;
+}
+
+.homework2 {
+  grid-area: homework2;
+}
+
+.homework3 {
+  grid-area: homework3;
+}
+
+.homework4 {
+  grid-area: homework4;
+}
+
+.homework5 {
+  grid-area: homework5;
+}
+
+.homework6 {
+  grid-area: homework6;
+}
+
+.python {
+  grid-area: python;
+}
+
+.sectionResume {
+  grid-area: sectionResume;
+  place-self: center !important;
+}
+
+.resumeName {
+  justify-self: center !important;
+}
+
+.resumeNav {
+  grid-area: resumeNav;
+}
+
+.resume {
+  grid-area: resume;
+  height: 65vh;
+  width: 70vw;
+  justify-self: center !important;
+}
+
+.sectionAboutMe {
+  grid-area: sectionAboutMe;
+  place-self: center;
+}
+
+.sectionProjects {
+  grid-area: sectionProjects;
+  place-self: center;
+}
+
+.navbar i {
+  color: rgb(245, 254, 255) !important;
+}
+
+.navbar-toggler-icon {
+  color: rgb(245, 254, 255) !important;
+}
+
+.phase1 {
+  grid-area: Phase1;
+}
+
+.phase2 {
+  grid-area: Phase2;
+}
+
+.phase3 {
+  grid-area: Phase3;
+}
+
+.container2 img:hover {
+  transition: transform 1s;
+  transform: scale(1.25);
+}
+
+.contactMeSection {
+  grid-area: sectionContactMe;
+  place-self: center;
+  justify-self: center;
+}
+
+.contactMeEmail {
+  grid-area: contactMeEmail;
+}
+
+.contactMeName {
+  grid-area: contactMeName;
+}
+
+.contactMeSubmit {
+  grid-area: contactMeSubmit;
+}
+
+.contactMeSubject {
+  grid-area: contactMeSubject;
+}
+
+.contactMeMessage {
+  grid-area: contactMeMessage;
+  align-self: stretch;
+}
+
+.container .card {
+  min-height: 480px !important;
+}
+
+@media screen and (max-width: 1360px) {
+  .container2 {
+    overflow-x: auto;
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "sectionProjects sectionProjects sectionProjects sectionProjects"
+      "Phase1 Phase1 Phase2 Phase2"
+      "project1 project1 project2 project2"
+      "project1 project1 project2 project2"
+      "homework1 homework2 homework3 homework4"
+      "homework1 homework2 homework3 homework4";
+    grid-row-gap: 1em;
+    padding-bottom: 1em;
+    justify-items: center;
+  }
+  .phase {
+    padding-top: 0em !important;
+  }
+  .sectionProjects {
+    padding-top: 0.5em !important;
+  }
+  .project1 .card {
+    align-self: stretch;
+    width: 36rem !important;
+  }
+  .project2 .card {
+    align-self: stretch;
+    width: 36rem !important;
+  }
+  .project1 img {
+    max-height: 180px;
+  }
+  .project2 img {
+    max-height: 180px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container2 {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "sectionProjects sectionProjects"
+      "Phase1 Phase1"
+      "project1 project1"
+      "homework1 homework2"
+      "Phase2 Phase2"
+      "project2 project2"
+      "homework3 homework4";
+    padding-bottom: 1em;
+  }
+
+  .project1 img {
+    /* width: 100%; */
+    max-height: 280px;
+  }
+
+  .container2 .card {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container1 {
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "sectionAboutMe sectionAboutMe aboutMeIMG aboutMeOverview"
+      "sectionAboutMe sectionAboutMe aboutMeIMG aboutMeOverview"
+      "aboutMe aboutMe aboutMe aboutMe"
+      "aboutEducation aboutEducation aboutInterests aboutInterests"
+      /* "aboutEducation aboutEducation aboutEducation" */;
+    grid-row-gap: 1em;
+  }
+
+  .aboutInterests ul {
+    padding: 1em 0;
+    justify-self: start;
+  }
+
+  .aboutEducation ul {
+    padding: 1em 0;
+    justify-self: end;
+    padding-right: 1em;
+  }
+
+  .aboutmepic {
+    width: 125px;
+    height: 125px;
+  }
+
+  .aboutMeOverview {
+    align-self: center;
+  }
+  .project1 .card {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+
+  .container2 .card {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container1 {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "sectionAboutMe sectionAboutMe"
+      "aboutMeIMG aboutMeOverview"
+      "aboutMe aboutMe"
+      "aboutEducation aboutEducation"
+      "aboutInterests aboutInterests"
+      /* "aboutEducation aboutEducation aboutEducation" */;
+    grid-row-gap: 1em;
+  }
+  .aboutInterests ul {
+    padding: 0.25em 0;
+    justify-self: start;
+  }
+
+  .aboutEducation ul {
+    padding: 0.25em 0;
+    justify-self: end;
+  }
+
+  .container2 a {
+    font-size: 14px;
+  }
+
+  .container4 {
+    padding: 0.25em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "sectionContactMe sectionContactMe"
+      "contactMeName contactMeEmail"
+      "contactMeSubject contactMeSubject"
+      "contactMeMessage contactMeMessage"
+      "contactMeSubmit contactMeSubmit"
+      /* "aboutEducation aboutEducation aboutEducation" */;
+    grid-row-gap: 1em;
+  }
 }
