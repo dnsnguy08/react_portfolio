@@ -59,8 +59,8 @@
 A place to share my projects not only when applying for jobs or working as a freelancer but also so that I can share your work with fellow developers and collaborate on future projects.
 
 ## Repository
-- [Live App](https://j-a-text-editor.herokuapp.com/)
-- [Project Repo](https://github.com/dnsnguy08/jate_text_editor)
+- [Live App](https://dnsnguy08.github.io/react_portfolio/)
+- [Project Repo](https://github.com/dnsnguy08/react_portfolio)
 ## Questions
 For any questions, please reach out to:
 - Dennis Nguyen
